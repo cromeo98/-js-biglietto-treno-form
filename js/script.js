@@ -19,6 +19,8 @@ var genera = document.getElementById('genera');
 
 genera.addEventListener("click", function(){
 
+    document.getElementById('user-ticket').className = "d-block"
+
 // Nome passeggero
     var userName = document.getElementById('name').value; // dichiaro una variabile nella quale salvare il valore dell'input tag con id="name"
 
@@ -29,7 +31,26 @@ genera.addEventListener("click", function(){
 
     var fasciaEtaFirstUpp = fasciaEta.charAt(0).toUpperCase() + fasciaEta.slice(1).toLowerCase(); // cambio la prima lettera in lettera maiuscola
 
-    document.getElementById('offerta').innerHTML = fasciaEtaFirstUpp; // inserisco il valore estratto all'interno del tag con id="user-name"
+// Prezzo calcolato in base all'esercizio visto in precedenza
+    var km = document.getElementById('km').value; // dichiaro una variabile nella quale salvare il valore dell'input tag con id="km"
+
+    // calcoli su scontistiche dello scorso esercizio
+    var pricePerKm = km * 0.21;
+
+    if (fasciaEta == 'minorenne'){
+        pricePerKm = pricePerKm - pricePerKm * 20 / 100;
+        document.getElementById('prezzo').innerHTML = pricePerKm.toFixed(2) + ' €';
+        document.getElementById('offerta').innerHTML = 'Sconto ' +fasciaEtaFirstUpp; // inserisco il valore estratto all'interno del tag con id="offerta"
+
+    } else if (fasciaEta == 'over65'){
+        pricePerKm = pricePerKm - pricePerKm * 40 / 100;
+        document.getElementById('prezzo').innerHTML = pricePerKm.toFixed(2) + ' €';
+        document.getElementById('offerta').innerHTML = 'Sconto ' +fasciaEtaFirstUpp; // inserisco il valore estratto all'interno del tag con id="offerta"
+    } else{
+        document.getElementById('prezzo').innerHTML = pricePerKm.toFixed(2) + ' €';
+        document.getElementById('offerta').innerHTML = fasciaEtaFirstUpp; // inserisco il valore estratto all'interno del tag con id="offerta"
+    }
+
 
 // Numero carrozza (numero casuale tra 1 e 9 incluso)
     var randomNumCarrozza = Math.floor(Math.random() * 9 ) + 1; //creo num random
@@ -40,23 +61,6 @@ genera.addEventListener("click", function(){
     var randomNum = Math.floor(Math.random() * 10000 ) + 90000; //creo num random
 
     document.getElementById('codice-cp').innerHTML = randomNum; // inserisco il valore estratto all'interno del tag con id="codice-cp"
-
-// Prezzo calcolato in base all'esercizio visto in precedenza
-
-    var km = document.getElementById('km').value; // dichiaro una variabile nella quale salvare il valore dell'input tag con id="km"
-
-    // calcoli su scontistiche dello scorso esercizio
-    var pricePerKm = km * 0.21;
-
-    if (fasciaEta == 'minorenne'){
-        pricePerKm = pricePerKm - pricePerKm * 20 / 100;
-        document.getElementById('prezzo').innerHTML = pricePerKm.toFixed(2) + ' €';
-    } else if (fasciaEta == 'over65'){
-        pricePerKm = pricePerKm - pricePerKm * 40 / 100;
-        document.getElementById('prezzo').innerHTML = pricePerKm.toFixed(2) + ' €';
-    } else{
-        document.getElementById('prezzo').innerHTML = pricePerKm.toFixed(2) + ' €';
-    }
 
 })
 

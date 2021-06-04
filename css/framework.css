@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+/* display */
 .d-block{
     display: block;
+}
+
+.d-none{
+    display: none;
 }
 
 /* text formats */
