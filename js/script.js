@@ -40,7 +40,25 @@ genera.addEventListener("click", function(){
     var randomNum = Math.floor(Math.random() * 10000 ) + 90000; //creo num random
 
     document.getElementById('codice-cp').innerHTML = randomNum; // inserisco il valore estratto all'interno del tag con id="codice-cp"
+
+// Prezzo calcolato in base all'esercizio visto in precedenza
+
+    var km = document.getElementById('km').value; // dichiaro una variabile nella quale salvare il valore dell'input tag con id="km"
+
+    // calcoli su scontistiche dello scorso esercizio
+    var pricePerKm = km * 0.21;
+
+    if (fasciaEta == 'minorenne'){
+        pricePerKm = pricePerKm - pricePerKm * 20 / 100;
+        document.getElementById('prezzo').innerHTML = pricePerKm.toFixed(2) + ' €';
+    } else if (fasciaEta == 'over65'){
+        pricePerKm = pricePerKm - pricePerKm * 40 / 100;
+        document.getElementById('prezzo').innerHTML = pricePerKm.toFixed(2) + ' €';
+    } else{
+        document.getElementById('prezzo').innerHTML = pricePerKm.toFixed(2) + ' €';
+    }
+
 })
 
 
-// Prezzo calcolato in base all'esercizio visto in precedenza
+
