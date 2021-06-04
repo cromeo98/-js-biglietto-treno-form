@@ -20,19 +20,22 @@ var genera = document.getElementById('genera');
 genera.addEventListener("click", function(){
 
 // Nome passeggero
-// dichiaro una variabile nella quale salvare il valore dell'input tag con id="name"
-    var userName = document.getElementById('name').value;
-    console.log(userName);
-// inserisco il valore estratto all'interno del tag con id="user-name"
-    document.getElementById('user-name').innerHTML = userName;
- 
-// Codice treno (numero casuale tra 90000 e 100000 escluso)
-    var randomNum = Math.floor(Math.random() * 10000 ) + 90000;
+    var userName = document.getElementById('name').value; // dichiaro una variabile nella quale salvare il valore dell'input tag con id="name"
 
-// inserisco il valore estratto all'interno del tag con id="codice-cp"
-    document.getElementById('codice-cp').innerHTML = randomNum;
+    document.getElementById('user-name').innerHTML = userName; // inserisco il valore estratto all'interno del tag con id="user-name"
+ 
+// Categoria selezionata dall'utente
+    var fasciaEta = document.getElementById('fascia-eta').value; // dichiaro una variabile nella quale salvare il valore dell'input tag con id="fascia-eta"
+
+    var fasciaEtaFirstUpp = fasciaEta.charAt(0).toUpperCase() + fasciaEta.slice(1).toLowerCase(); // cambio la prima lettera in lettera maiuscola
+
+    document.getElementById('offerta').innerHTML = fasciaEtaFirstUpp; // inserisco il valore estratto all'interno del tag con id="user-name"
+
+// Codice treno (numero casuale tra 90000 e 100000 escluso)
+    var randomNum = Math.floor(Math.random() * 10000 ) + 90000; //creo num random
+
+    document.getElementById('codice-cp').innerHTML = randomNum; // inserisco il valore estratto all'interno del tag con id="codice-cp"
 })
 
 // Numero carrozza (numero casuale tra 1 e 9 incluso)
 // Prezzo calcolato in base all'esercizio visto in precedenza
-// Categoria selezionata dall'utente
