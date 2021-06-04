@@ -110,6 +110,54 @@
     padding: 1rem;
 }
 
+.pt-5rem{
+    padding-top: 5rem;
+}
+.pt-4rem{
+    padding-top: 4rem;
+}
+.pt-3rem{
+    padding-top: 3rem;
+}
+.pt-2rem{
+    padding-top: 2rem;
+}
+.pt-1rem{
+    padding-top: 1rem;
+}
+
+.pb-5rem{
+    padding-top: 5rem;
+}
+.pb-4rem{
+    padding-top: 4rem;
+}
+.pb-3rem{
+    padding-top: 3rem;
+}
+.pb-2rem{
+    padding-top: 2rem;
+}
+.pb-1rem{
+    padding-top: 1rem;
+}
+
+.ptb-5rem{
+    padding: 5rem 0;
+}
+.ptb-4rem{
+    padding: 4rem 0;
+}
+.ptb-3rem{
+    padding: 3rem 0;
+}
+.ptb-2rem{
+    padding: 2rem 0;
+}
+.ptb-1rem{
+    padding: 1rem 0;
+}
+
 .pr-5rem{
     padding-right: 5rem;
 }

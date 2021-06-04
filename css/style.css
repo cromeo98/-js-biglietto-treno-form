@@ -50,3 +50,6 @@ body{
 .grey-bg{
     background-color: rgb(128, 128, 128);
 }
+td.txt-bold{
+    vertical-align: text-top;
+}
