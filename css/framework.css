@@ -94,6 +94,22 @@
 }
 
 /* paddings */
+.p-5rem{
+    padding: 5rem;
+}
+.p-4rem{
+    padding: 4rem;
+}
+.p-3rem{
+    padding: 3rem;
+}
+.p-2rem{
+    padding: 2rem;
+}
+.p-1rem{
+    padding: 1rem;
+}
+
 .pr-5rem{
     padding-right: 5rem;
 }
