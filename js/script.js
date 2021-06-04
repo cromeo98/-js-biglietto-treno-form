@@ -10,7 +10,7 @@
 // Bonus: aggiungete qualche controllo sui dati di input!
 // Buon lavoro e buon viaggio! :monorotaia:
 
-// 1) Creiamo un finto biglietto del treno con:
+//Creiamo un finto biglietto del treno con:
 
 // prima di tutto dichiaro una variabile per il bottono genera
 var genera = document.getElementById('genera');
@@ -19,6 +19,7 @@ var genera = document.getElementById('genera');
 
 genera.addEventListener("click", function(){
 
+// Al click su "Genera" appare la schermata con le caratteristiche del biglietto.
     document.getElementById('user-ticket').className = "d-block"
 
 // Nome passeggero
@@ -48,7 +49,7 @@ genera.addEventListener("click", function(){
         document.getElementById('offerta').innerHTML = 'Sconto ' +fasciaEtaFirstUpp; // inserisco il valore estratto all'interno del tag con id="offerta"
     } else{
         document.getElementById('prezzo').innerHTML = pricePerKm.toFixed(2) + ' €';
-        document.getElementById('offerta').innerHTML = fasciaEtaFirstUpp; // inserisco il valore estratto all'interno del tag con id="offerta"
+        document.getElementById('offerta').innerHTML = 'Non ci sono offerte attive per la tua fascia d\'età'; // inserisco il valore estratto all'interno del tag con id="offerta"
     }
 
 
@@ -64,5 +65,16 @@ genera.addEventListener("click", function(){
 
 })
 
+// Al click su "Annulla" dobbiamo ripulire il form e far sparire la sezione che calcola il prezzo del biglietto.
+var annulla = document.getElementById('annulla');
 
+// aggiungo l'add event listener: gli dico cosa deve fare quando passo sopra la var "genera" (che corrisponde al bottone con id "annulla" nell'HTML) e ci clicco sopra (click)
 
+annulla.addEventListener("click", function(){
+
+    document.getElementById('user-ticket').className = "d-none"
+    document.getElementById('name').value = "";
+    document.getElementById('km').value = "";
+    document.getElementById('fascia-eta').value = "";
+
+})
