@@ -8,6 +8,22 @@
     text-align: center;
 }
 
+.txt-upp{
+    text-transform: uppercase;
+}
+
+.h-100vh{
+    height: 100vh;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.txt-white{
+    color: white;
+}
+
 .container-fluid{
     width: 100%;
 }
@@ -527,4 +543,29 @@
     .bottom-lg {
         align-items: flex-end;
     }
+}
+
+/* debug */
+[class*="col"]{
+    border: 1px solid blue;
+}
+
+.red-bord{
+    border: 1px solid red;
+}
+
+.h-100px{
+    height: 100px;
+}
+
+.h-250px{
+    height: 250px;
+}
+
+.h-500px{
+    height: 500px;
+}
+
+.w-100x{
+    width: 100%;
 }
