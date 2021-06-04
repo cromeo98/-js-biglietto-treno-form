@@ -26,22 +26,33 @@
 
                 </div>
 
+                <!-- form -->
                 <div class="row red-bord bg-white h-250px around-xs">
 
-                    <div class="col-xs-3 h-100px"></div>
-                    <div class="col-xs-3 h-100px"></div>
-                    <div class="col-xs-3 h-100px"></div>
+                    <div class="col-xs-3 h-100px">
+                        <label for="name" class="d-block">Nome e Cognome</label>
+                        <input id="name" type="text" placeholder="Inserisci il tuo nome">
+                    </div>
+                    <div class="col-xs-3 h-100px">
+                        <label for="km" class="d-block">Km da percorrere</label>
+                        <input id="km" type="number" placeholder="Inserisci i km">
+                    </div>
+                    <div class="col-xs-3 h-100px">
+                        <label for="fascia-eta" class="d-block">Fascia d'età</label>
+                        <select id="fascia-eta" aria-placeholder="Scegli la tua fascia d'età">
+                            <option value="minorenne">Minorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="over65">Over65</option>
+                        </select>
+                    </div>
 
                     <div class="col-xs-12 txt-cen">
 
-                        <button></button>
-                        <button></button>
+                        <button>Genera</button>
+                        <button>Annulla</button>
                     </div>
                 </div>
-
-                <div class="form">
-
-                </div>
+                <!-- end form -->
 
             </div>
 
@@ -49,7 +60,7 @@
         <!-- end calculator -->
 
         <!-- section user-ticket -->
-        <section id="calculator">
+        <section id="user-ticket">
 
             <div class="container">
 
@@ -86,10 +97,6 @@
                         </table>
                     </div>
                     
-
-                </div>
-
-                <div class="form">
 
                 </div>
 
