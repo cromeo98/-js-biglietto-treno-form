@@ -31,11 +31,16 @@ genera.addEventListener("click", function(){
 
     document.getElementById('offerta').innerHTML = fasciaEtaFirstUpp; // inserisco il valore estratto all'interno del tag con id="user-name"
 
+// Numero carrozza (numero casuale tra 1 e 9 incluso)
+    var randomNumCarrozza = Math.floor(Math.random() * 9 ) + 1; //creo num random
+
+    document.getElementById('carrozza').innerHTML = randomNumCarrozza; // inserisco il valore estratto all'interno del tag con id="carrozza"
+
 // Codice treno (numero casuale tra 90000 e 100000 escluso)
     var randomNum = Math.floor(Math.random() * 10000 ) + 90000; //creo num random
 
     document.getElementById('codice-cp').innerHTML = randomNum; // inserisco il valore estratto all'interno del tag con id="codice-cp"
 })
 
-// Numero carrozza (numero casuale tra 1 e 9 incluso)
+
 // Prezzo calcolato in base all'esercizio visto in precedenza
